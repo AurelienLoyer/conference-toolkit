@@ -1,6 +1,19 @@
 # Conference Toolkit
 
-## Project setup
+## How to use
+
+- 📺 Go to <a target="_blank" href="https://aurelien-loyer.fr/conference-toolkit/">https://aurelien-loyer.fr/conference-toolkit/</a> 
+- ⌨️ Press escape key to access admin page
+- ⚙️ Configure yours slides
+- 💾 Save your config
+- 🚜 Import your config
+
+## Help / Idea 
+
+Contact [@AurelienLoyer](https://twitter.com/AurelienLoyer) on Twitter 🐦
+
+## Develop On Project ?
+
 ```
 npm install
 ```

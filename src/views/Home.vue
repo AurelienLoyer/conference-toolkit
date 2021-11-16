@@ -3,14 +3,17 @@
     id="home"
     class="wrapper"
     v-cloak
-    v-bind:class="{'is-previous': isPreviousSlide, 'first-load': isFirstLoad}"
+    v-bind:class="{ 'is-previous': isPreviousSlide, 'first-load': isFirstLoad }"
   >
     <div
       class="slide-wrapper"
       v-for="(slide, index) in slides"
       :key="`slide-${index}`"
       :class="{ active: index === currentSlide }"
-      :style="{ 'z-index': (slides.length - index), 'background-image': 'url(' + slide.bgImg + ')' }"
+      :style="{
+        'z-index': slides.length - index,
+        'background-image': 'url(' + slide.bgImg + ')',
+      }"
     >
       <div class="slide-inner">
         <div class="slide-bg-text">
@@ -20,7 +23,9 @@
         <div class="slide-rect-filter" v-if="slide.logoImg">
           <div
             class="slide-rect"
-            v-bind:style="{'border-image-source': 'url(' + slide.rectImg + ')'}"
+            v-bind:style="{
+              'border-image-source': 'url(' + slide.rectImg + ')',
+            }"
           >
             <c-logo :img="slide.logoImg"></c-logo>
           </div>
@@ -74,7 +79,8 @@
             v-if="slide.content === 'speakers'"
           ></c-speakers>
 
-          <c-contest v-if="slide.content === 'contest'"
+          <c-contest
+            v-if="slide.content === 'contest'"
             :contest1Image="slide.props.contest1Image"
             :contest1Title="slide.props.contest1Title"
             :contest1Content="slide.props.contest1Content"
@@ -94,7 +100,9 @@
         :key="`controls-${index}`"
         v-bind:class="{ active: index === currentSlide }"
         v-on:click="updateSlide(index)"
-      >{{ slide.headlineFirstLine }} {{ slide.headlineSecondLine }}</button>
+      >
+        {{ slide.headlineFirstLine }} {{ slide.headlineSecondLine }}
+      </button>
     </div>
 
     <div class="pagination-container">
@@ -152,6 +160,7 @@ export default {
   },
   mounted: function () {
     if(!this.timer) {
+      alert('Timer is required for the slider')
       this.$router.push('admin');
       return;
     }
@@ -191,10 +200,11 @@ export default {
       }
       else if (event.code === 'ArrowLeft') {
         if(this.currentSlide === 0) {
-          this.currentSlide = 4;
+          this.currentSlide = this.slides.length - 1;
         }else { 
           this.currentSlide--;
         }
+        
         this.counter = 0;
       }else if (event.code === 'Escape') {
         this.$router.push('admin');
