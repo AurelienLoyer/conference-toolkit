@@ -24,7 +24,11 @@
           <div
             class="slide-rect"
             v-bind:style="{
-              'border-image-source': 'url(' + slide.rectImg + ')',
+              'border-image-source':
+                'url(' +
+                (slide.rectImg ||
+                  'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png') +
+                ')',
             }"
           >
             <c-logo :img="slide.logoImg"></c-logo>
@@ -85,6 +89,7 @@
             :contest1Title="slide.props.contest1Title"
             :contest1Content="slide.props.contest1Content"
             :contest1SubContent="slide.props.contest1SubContent"
+            :contest2Image="slide.props.contest2Image"
             :contest2Title="slide.props.contest2Title"
             :contest2Content="slide.props.contest2Content"
             :contest2SubContent="slide.props.contest2SubContent"
@@ -151,7 +156,7 @@ export default {
         isLoopUp: true,
         isPreviousSlide: false,
         isFirstLoad: true,
-        isPlaying: JSON.parse(window.localStorage.getItem('isPlaying')),
+        isPlaying: JSON.parse(window.localStorage.getItem('isPlaying') || 'true'),
         counter: 0,
         timer: parseInt(window.localStorage.getItem('timer')) || 30,
         slides: JSON.parse(window.localStorage.getItem('slides') || '[]') || [],
