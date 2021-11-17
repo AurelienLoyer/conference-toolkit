@@ -1,5 +1,7 @@
 # Conference Toolkit
 
+[![Deployment status 🚀](https://github.com/AurelienLoyer/conference-toolkit/actions/workflows/gh-pages-on-release.yml/badge.svg)](https://github.com/AurelienLoyer/conference-toolkit/actions/workflows/gh-pages-on-release.yml)
+
 ## How to use
 
 - 📺 Go to <a target="_blank" href="https://aurelien-loyer.fr/conference-toolkit/">https://aurelien-loyer.fr/conference-toolkit/</a> 
