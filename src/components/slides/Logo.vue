@@ -24,6 +24,6 @@ export default {
     top: 32%;
     left: 10%;
     z-index: 1000;
-    opacity: 0.6;
+    opacity: 1;
 }
 </style>
