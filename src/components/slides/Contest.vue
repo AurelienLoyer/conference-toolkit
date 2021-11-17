@@ -130,9 +130,9 @@ export default {
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  // box-sizing: border-box;
+  // margin: 0;
+  // padding: 0;
   transition: all 0.5s;
 }
 
@@ -144,6 +144,7 @@ button {
   border: none;
   cursor: pointer;
 }
+
 button:focus {
   outline: 0;
 }
@@ -197,6 +198,7 @@ button:focus {
     background: #0c1f2c;
     border-radius: 23px;
     padding: 3vh 4vw;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
@@ -204,205 +206,20 @@ button:focus {
 
   h1 {
     font-weight: 800;
-    line-height: 46px;
-    font-size: 50px;
-    margin-bottom: 15px;
+    line-height: 2vw;
+    font-size: 2vw;
+    // margin-bottom: 15px;
     text-align: center;
     text-transform: uppercase;
   }
 
   h2 {
     font-weight: 300;
-    font-size: 32px;
+    font-size: 1.5vw;
     letter-spacing: 1.6px;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
   }
 }
-
-// .card {
-//   @include object(892px, auto, null);
-//   top: 12vh;
-//   right: 10vw;
-//   display: flex;
-//   align-items: center;
-//   position: absolute;
-
-//   &.top {
-//     .helmet {
-//       position: absolute;
-//       top: 2.5vh;
-//       height: 80%;
-//       left: -60%;
-//     }
-//   }
-
-//   &.bottom {
-//     top: 55%;
-//     height: 350px;
-//     flex-direction: row-reverse;
-
-//     .helmet {
-//       position: absolute;
-//       top: 2.5vh;
-//       height: 80%;
-//       left: -60%;
-//     }
-
-//     .right {
-//       left: -180px;
-//       width: 700px;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-
-//       .productInfo {
-//         width: 635px;
-//         height: 300px;
-//         margin: 70px 0 0 50px;
-//       }
-//     }
-
-//     .content {
-//       color: white;
-//       button {
-//         margin: 0 10px;
-//       }
-//     }
-//   }
-
-//   .left {
-//     @include object(390px, 25vh, #cc3843);
-//     border-radius: 23px;
-//     display: flex;
-//     align-items: center;
-//     .wordmark {
-//       opacity: 0.2;
-//       transform: rotate(-90deg) scale(1.2);
-//       margin-left: -180px;
-//       width: 315px;
-//     }
-//   }
-
-//   .right {
-//     @include object(654px, 30vh, #0c1f2c);
-//     position: absolute;
-//     left: -140px;
-//     transform: translateX(50%);
-//     border-radius: 23px;
-
-//     h1 {
-//       font-weight: 800;
-//       line-height: 46px;
-//       font-size: 40px;
-//       margin-bottom: 15px;
-//       text-align: left;
-//       text-transform: uppercase;
-//     }
-//     h2 {
-//       font-weight: 300;
-//       font-size: 32px;
-//       letter-spacing: 1.6px;
-//       margin-bottom: 30px;
-//     }
-
-//     button {
-//       height: 48px;
-//       background: #cb2140;
-//       border-radius: 90px;
-//       font-weight: 300;
-//       line-height: 35px;
-//       font-size: 1.5em;
-//       padding: 0 24px;
-//       color: #fff;
-//       i {
-//         margin-right: 20px;
-//       }
-//     }
-
-//     .productInfo {
-//       @include object(490px, 300px, null);
-//       margin: 30px 0 0 80px;
-//       color: #fff;
-//       font-family: "Open Sans", sans-serif;
-//       text-align: left;
-
-//       .details {
-//         height: 145px;
-//         .size,
-//         .durability {
-//           width: 50%;
-//           float: left;
-//         }
-//         .size {
-//           border-right: 1px solid #cb1f40;
-//           padding: 30px 0;
-//         }
-//         .durability {
-//           text-align: center;
-//           h4 {
-//             margin-top: 20px;
-//             margin-bottom: 30px;
-//           }
-//         }
-//       }
-
-//       i.fav {
-//         font-size: 12px;
-//         margin: 0 12px 0 24px;
-//         color: #cb2140;
-//       }
-//       a {
-//         font-size: 12px;
-//         color: #fff;
-//         opacity: 0.3;
-//         text-decoration: none;
-//       }
-//       h3 {
-//         @include object(80px, 80px, null);
-//         font-weight: 300;
-//         line-height: 80px;
-//         font-size: 16px;
-//         margin-left: 30px;
-//         position: relative;
-//         &:after {
-//           content: "";
-//           position: absolute;
-//           @include object(80px, 80px, null);
-//           border-radius: 50%;
-//           border: 2px solid #cb1f40;
-//           border-top-color: transparent;
-//           transform: rotate(-45deg) translate(-50%, -50%);
-//         }
-//       }
-//       h4 {
-//         font-weight: bold;
-//         line-height: normal;
-//         font-size: 12px;
-//         letter-spacing: 3px;
-//         margin-bottom: 15px;
-//       }
-//       p {
-//         @include object(30px, 30px, null);
-//         display: inline-block;
-//         line-height: normal;
-//         text-align: center;
-//         font-weight: 300px;
-//         line-height: 28px;
-//         font-size: 14px;
-//         border-radius: 50%;
-//         transition: 0.3s linear;
-//         border: 1px solid transparent;
-//         cursor: pointer;
-//         &:hover {
-//           border: 1px solid #cb1f40;
-//         }
-//         &:nth-of-type(1) {
-//           border: 1px solid #cb1f40;
-//         }
-//       }
-//     }
-//   }
-// }
 
 .slider {
   @include object(60px, 60px, #fff);
@@ -427,9 +244,9 @@ button:focus {
 }
 
 @media screen and (max-width: 576px) {
-  .card {
-    transform: rotate(90deg) scale(0.7) translate(calc(50% - 25vh), 50%);
-    position: static;
-  }
+  // .card {
+  //   transform: rotate(90deg) scale(0.7) translate(calc(50% - 25vh), 50%);
+  //   position: static;
+  // }
 }
 </style>
